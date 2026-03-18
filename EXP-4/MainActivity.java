@@ -19,14 +19,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Initialize views
         num1 = findViewById(R.id.num1);
         num2 = findViewById(R.id.num2);
         btnAdd = findViewById(R.id.btnAdd);
         btnReset = findViewById(R.id.btnReset);
         result = findViewById(R.id.result);
 
-        // Logic for Add Button
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,15 +43,14 @@ public class MainActivity extends AppCompatActivity {
                 result.setText("Result: " + sum);
             }
         });
-
-        // Logic for Reset Button
+        
         btnReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 num1.setText("");
                 num2.setText("");
                 result.setText("Result: ");
-                num1.requestFocus(); // Move cursor back to first field
+                num1.requestFocus();
             }
         });
     }
